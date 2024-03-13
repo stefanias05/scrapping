@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title%} Download Data Info {%endblock%}
+{% block content%}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-md-4">
+        <form method="post" enctype="multipart/form-data" action="{% url "download_data" %}">
+            {% csrf_token %}
+            <label>Code Product</label>
+            <input type="text" id ="product_code" name ="product_code">
+            <button type="submit" class ="btn btn-success">Download </button>
+
+        </form>
+    </div>
+</div>
+</div>
+
+{%endblock%}
